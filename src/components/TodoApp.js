@@ -3,7 +3,7 @@ import Todo from "./Todo";
 import './TodoApp.css';
 
 export default function TodoApp() {
-    const [title, setTitle] = useState('Hola');
+    const [title, setTitle] = useState('');
     const [todos, setTodos] = useState([]);
 
     function handleChange(e) {
@@ -46,7 +46,7 @@ export default function TodoApp() {
     return(
         <div className="todoContainer">
             <from className="todoCreateForm" onSubmit={handleSubmit}>
-                <input className="todoInput" value={title} onChange={handleChange}/>
+                <input className="todoInput" value={title} onChange={handleChange} placeholder='Escribe tu nota...'/>
                 <input className="buttonCreate" type='submit' value='Create todo' onClick={handleSubmit}/>
             </from>
 
